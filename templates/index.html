@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Consultation Médicale</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+    <div class ="contenu">
+        <hr>
+        <h1>Willkommen! was kann ich für Sie tun</h1>
+        <hr>
+        <p>Beginnen Sie eine Beratung, indem Sie auf die Schaltfläche unten klicken:</p>
+        <a href="/conversation">
+            <button type="button" class="btn btn-danger bt-lg">Beratung starten</button>
+        </a>
+    </div>
+</body>
+
+</html>

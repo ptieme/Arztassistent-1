@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+    <div class="contenu">
+        <h1>Virtueller medizinischer Assistent</h1>
+
+        <!-- Affichage du message du serveur -->
+        <p><strong>Serveur :</strong> {{ response }}</p>
+
+        <!-- Formulaire pour envoyer un message -->
+        <form method="POST">
+            <label for="message">Ihre Antwort:</label>
+            <input type="text" id="message" name="message" required>
+            <button type="submit" class ="btn btn-danger">Senden</button>
+        </form>
+
+        <!-- Si un message utilisateur existe, affiche-le -->
+        {% if user_message %}
+        <p><strong>Sie:</strong> {{ user_message }}</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
